@@ -11,17 +11,43 @@ Utilice el archivo `data.csv` para resolver las preguntas.
 
 
 """
+import csv 
+import sys
+lista=[]
 
+with open('data.csv') as data:
+    reader = csv.reader(data,delimiter='\t')
+    lista = list(reader)
+
+    #CREAMOS UNA LISTA CUYOS ELEMENTOS SEAN LAS COLUMNAS DEL CSV        
+    columna1=[]
+    columna2=[]
+    columna3=[]
+    columna4=[]
+    columna5=[]
+    columna6=[]
+    columnas=[columna1,columna2,columna3,columna4,columna5,columna6]
+
+    for fila in lista:
+        for index, elemento in enumerate(fila):
+            if index == 0:
+                columna1.append(fila[index])
+            elif index == 1:
+                columna2.append(fila[index])        
+            elif index == 2:
+                columna3.append(fila[index])
+            elif index == 3:
+                columna4.append(fila[index])       
+            elif index == 4:
+                columna5.append(fila[index])
+            elif index == 5:
+                columna6.append(fila[index])
 
 def pregunta_01():
-    """
-    Retorne la suma de la segunda columna.
-
-    Rta/
-    214
-
-    """
-    return
+    a = columna2
+    for i in range(len(a)):
+        a[i] = int(a[i])
+    return sum(a)
 
 
 def pregunta_02():
