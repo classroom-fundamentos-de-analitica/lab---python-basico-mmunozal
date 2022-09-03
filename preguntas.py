@@ -25,8 +25,7 @@ with open('data.csv') as data:
     columna3=[]
     columna4=[]
     columna5=[]
-    columna6=[]
-    columnas=[columna1,columna2,columna3,columna4,columna5,columna6]
+    columnas=[columna1,columna2,columna3,columna4,columna5]
 
     for fila in lista:
         for index, elemento in enumerate(fila):
@@ -40,8 +39,7 @@ with open('data.csv') as data:
                 columna4.append(fila[index])       
             elif index == 4:
                 columna5.append(fila[index])
-            elif index == 5:
-                columna6.append(fila[index])
+
 
 def pregunta_01():
     a = columna2
@@ -51,21 +49,27 @@ def pregunta_01():
 
 
 def pregunta_02():
-    """
-    Retorne la cantidad de registros por cada letra de la primera columna como la lista
-    de tuplas (letra, cantidad), ordendas alfabéticamente.
+ 
+  a=columna1
+  listaA=[]
+  listaB=[]
+  listaC=[]
+  listaD=[]
+  listaE=[]
+  for i in a:
+    if i=='A':
+      listaA= a.count(i)
+    elif i=='B':
+      listaB=a.count(i)
+    elif i=='C':
+      listaC=a.count(i)
+    elif i=='D':
+      listaD=a.count(i)
+    else:
+      listaE=a.count(i)
+  ayuda= [("A",listaA),("B",listaB),("C",listaC),("D",listaD),("E",listaE)]
 
-    Rta/
-    [
-        ("A", 8),
-        ("B", 7),
-        ("C", 5),
-        ("D", 6),
-        ("E", 14),
-    ]
-
-    """
-    return
+  return ayuda
 
 
 def pregunta_03():
