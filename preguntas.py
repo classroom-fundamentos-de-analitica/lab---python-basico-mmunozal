@@ -171,7 +171,7 @@ def pregunta_05():
       listaD.append(tupla[1])
     else:
       listaE.append(tupla[1])
-  ayuda= [("A",max(listaA),min(listaA)),("B",max(listaB),min(listaB)),("C",max(listaC),min(listaC)),("D",max(listaD),min(listaD)),("E",max(listaE),min(listaE))]
+  ayuda = [("A",max(listaA),min(listaA)),("B",max(listaB),min(listaB)),("C",max(listaC),min(listaC)),("D",max(listaD),min(listaD)),("E",max(listaE),min(listaE))]
 
   return ayuda
 
