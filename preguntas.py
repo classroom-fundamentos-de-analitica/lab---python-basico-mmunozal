@@ -103,28 +103,53 @@ def pregunta_03():
 
 
 def pregunta_04():
-    """
-    La columna 3 contiene una fecha en formato `YYYY-MM-DD`. Retorne la cantidad de
-    registros por cada mes, tal como se muestra a continuación.
+  a=columna3
+  lista=[]
 
-    Rta/
-    [
-        ("01", 3),
-        ("02", 4),
-        ("03", 2),
-        ("04", 4),
-        ("05", 3),
-        ("06", 3),
-        ("07", 5),
-        ("08", 6),
-        ("09", 3),
-        ("10", 2),
-        ("11", 2),
-        ("12", 3),
-    ]
+  for j in range(0,len(a)):
+    lista.append(a[j][5:7])
 
-    """
-    return
+
+  lista1=[]
+  lista2=[]
+  lista3=[]
+  lista4=[]
+  lista5=[]
+  lista6=[]
+  lista7=[]
+  lista8=[]
+  lista9=[]
+  lista10=[]
+  lista11=[]
+  lista12=[]
+  for i in lista:
+    if i=='01':
+      lista1= lista.count(i)
+    elif i=='02':
+      lista2=lista.count(i)
+    elif i=='03':
+      lista3=lista.count(i)
+    elif i=='04':
+      lista4=lista.count(i)
+    elif i=='05':
+      lista5=lista.count(i)
+    elif i=='06':
+      lista6=lista.count(i)
+    elif i=='07':
+      lista7=lista.count(i)
+    elif i=='08':
+      lista8=lista.count(i)
+    elif i=='09':
+      lista9=lista.count(i)
+    elif i=='10':
+      lista10=lista.count(i)
+    elif i=='11':
+      lista11=lista.count(i)
+    else:
+      lista12=lista.count(i)
+  ayuda= [("01",lista1),("02",lista2),("03",lista3),("04",lista4),("05",lista5),("06",lista6),("07",lista7),("08",lista8),("09",lista9),("10",lista10),("11",lista11),("12",lista12)]
+
+  return ayuda
 
 
 def pregunta_05():
