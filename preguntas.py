@@ -73,21 +73,27 @@ def pregunta_02():
 
 
 def pregunta_03():
-    """
-    Retorne la suma de la columna 2 por cada letra de la primera columna como una lista
-    de tuplas (letra, suma) ordendas alfabeticamente.
+  a=columna1
+  b=columna2
+  listaA=[]
+  listaB=[]
+  listaC=[]
+  listaD=[]
+  listaE=[]
+  for tupla in zip(a, b): #obtenemos la tupla en cada iteración
+    if tupla[0]=="A":
+      listaA.append(tupla[1])
+    elif tupla[0]=="B":
+      listaB.append(tupla[1])
+    elif tupla[0]=="C":
+      listaC.append(tupla[1])
+    elif tupla[0]=="D":
+      listaD.append(tupla[1])
+    else:
+      listaE.append(tupla[1])
+  ayuda= [("A",sum(listaA)),("B",sum(listaB)),("C",sum(listaC)),("D",sum(listaD)),("E",sum(listaE))]
 
-    Rta/
-    [
-        ("A", 53),
-        ("B", 36),
-        ("C", 27),
-        ("D", 31),
-        ("E", 67),
-    ]
-
-    """
-    return
+  return ayuda
 
 
 def pregunta_04():
