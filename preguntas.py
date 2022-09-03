@@ -96,6 +96,7 @@ def pregunta_03():
     else:
       listaE.append(tupla[1])
       E=sum(listaE)
+        
   ayuda= [("A",A),("B",B),("C",C),("D",D),("E",E)]
 
   return ayuda
