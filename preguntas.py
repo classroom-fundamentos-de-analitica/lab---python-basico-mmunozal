@@ -153,21 +153,27 @@ def pregunta_04():
 
 
 def pregunta_05():
-    """
-    Retorne una lista de tuplas con el valor maximo y minimo de la columna 2 por cada
-    letra de la columa 1.
+  a=columna1
+  b=columna2
+  listaA=[]
+  listaB=[]
+  listaC=[]
+  listaD=[]
+  listaE=[]
+  for tupla in zip(a, b): #obtenemos la tupla en cada iteración
+    if tupla[0]=="A":
+      listaA.append(tupla[1])
+    elif tupla[0]=="B":
+      listaB.append(tupla[1])
+    elif tupla[0]=="C":
+      listaC.append(tupla[1])
+    elif tupla[0]=="D":
+      listaD.append(tupla[1])
+    else:
+      listaE.append(tupla[1])
+  ayuda= [("A",max(listaA),min(listaA)),("B",max(listaB),min(listaB)),("C",max(listaC),min(listaC)),("D",max(listaD),min(listaD)),("E",max(listaE),min(listaE))]
 
-    Rta/
-    [
-        ("A", 9, 2),
-        ("B", 9, 1),
-        ("C", 9, 0),
-        ("D", 8, 3),
-        ("E", 9, 1),
-    ]
-
-    """
-    return
+  return ayuda
 
 
 def pregunta_06():
