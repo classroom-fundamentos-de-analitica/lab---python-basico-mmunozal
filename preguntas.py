@@ -83,15 +83,20 @@ def pregunta_03():
   for tupla in zip(a, b): #obtenemos la tupla en cada iteración
     if tupla[0]=="A":
       listaA.append(tupla[1])
+      A=sum(listaA)
     elif tupla[0]=="B":
       listaB.append(tupla[1])
+      B=sum(listaB)
     elif tupla[0]=="C":
       listaC.append(tupla[1])
+      C=sum(listaC)
     elif tupla[0]=="D":
       listaD.append(tupla[1])
+      D=sum(listaD)
     else:
       listaE.append(tupla[1])
-  ayuda= [("A",sum(listaA)),("B",sum(listaB)),("C",sum(listaC)),("D",sum(listaD)),("E",sum(listaE))]
+      E=sum(listaE)
+  ayuda= [("A",A),("B",B),("C",C),("D",D),("E",E)]
 
   return ayuda
 
