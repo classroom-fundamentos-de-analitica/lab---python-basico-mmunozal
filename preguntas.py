@@ -372,31 +372,13 @@ def pregunta_09():
 
   return ayuda
 
-
 def pregunta_10():
-    """
-    Retorne una lista de tuplas contengan por cada tupla, la letra de la columna 1 y la
-    cantidad de elementos de las columnas 4 y 5.
+  a = open("data.csv", "r").readlines()
+  a = [i.replace("\n", "") for i in a]
+  a = [j.split("\t") for j in a]
+  ayuda = [(j[0],len(j[3].split(",")),len(j[4].split(",")))for j in a]
 
-    Rta/
-    [
-        ("E", 3, 5),
-        ("A", 3, 4),
-        ("B", 4, 4),
-        ...
-        ("C", 4, 3),
-        ("E", 2, 3),
-        ("E", 3, 3),
-    ]
-
-
-    """
-    a = open("data.csv", "r").readlines()
-    a = [i.replace("\n", "") for i in a]
-    a = [j.split("\t") for j in a]
-    ayuda = [(j[0],len(j[3].split(",")),len(j[4].split(",")))for j in a]
-
-    return ayuda
+  return ayuda
 
 
 def pregunta_11():
