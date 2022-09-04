@@ -347,10 +347,10 @@ def pregunta_09():
     else:
       listaJ.append(int(tupla[1]))
 
-  ayuda = {("aaa",len(listaA)),("bbb",len(listaB)),("ccc",len(listaC)),("ddd",len(listaD)),("eee",len(listaE)),("fff",len(listaF)),("ggg",len(listaG)),("hhh",len(listaH)),("iii",len(listaI)),("jjj",len(listaJ))}
+  ayuda = [("aaa",len(listaA)),("bbb",len(listaB)),("ccc",len(listaC)),("ddd",len(listaD)),("eee",len(listaE)),("fff",len(listaF)),("ggg",len(listaG)),("hhh",len(listaH)),("iii",len(listaI)),("jjj",len(listaJ))]
+  ayuda_dicci=dict(ayuda)
 
-
-  return ayuda
+  return ayuda_dicci
 
 def pregunta_10():
   a = open("data.csv", "r").readlines()
