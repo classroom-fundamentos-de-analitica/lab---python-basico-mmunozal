@@ -362,24 +362,43 @@ def pregunta_10():
 
 
 def pregunta_11():
-    """
-    Retorne un diccionario que contengan la suma de la columna 2 para cada letra de la
-    columna 4, ordenadas alfabeticamente.
+    x = open("data.csv", "r").readlines()
+    x = [z.replace("\n", "") for z in x]
+    x = [data.split("\t") for data in x]
+    x = [(data[3].split(","),int(data[1])) for data in x]
+    valores = []
+    for letras,valor in x:
+        [valores.append((str(letra),valor)) for letra in letras]
 
-    Rta/
-    {
-        "a": 122,
-        "b": 49,
-        "c": 91,
-        "d": 73,
-        "e": 86,
-        "f": 134,
-        "g": 35,
-    }
+    listaA=[]
+    listaB=[]
+    listaC=[]
+    listaD=[]
+    listaE=[]
+    listaF=[]
+    listaG=[]
+    for tupla in x: #obtenemos la tupla en cada iteración
+      #print(tupla)
+      for j in tupla[0]:
+        #print(j)
+        if j=="a":
+          listaA.append(tupla[1])
+        elif j=="b":
+          listaB.append(tupla[1])
+        elif j=="c":
+          listaC.append(tupla[1])
+        elif j=="d":
+          listaD.append(tupla[1])
+        elif j=="e":
+          listaE.append(tupla[1])
+        elif j=="f":
+          listaF.append(tupla[1])
+        else:
+          listaG.append(tupla[1])
 
-
-    """
-    return
+    ayuda = [("a",sum(listaA)),("b",sum(listaB)),("c",sum(listaC)),("d",sum(listaD)),("e",sum(listaE)),("f",sum(listaF)),("g",sum(listaG))]
+    ayuda_dicci=dict(ayuda)
+    return ayuda_dicci
 
 
 def pregunta_12():
