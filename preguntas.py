@@ -304,7 +304,6 @@ def pregunta_08():
   return tuples
 
 
-def pregunta_09():
     """
     Retorne un diccionario que contenga la cantidad de registros en que aparece cada
     clave de la columna 5.
@@ -324,7 +323,54 @@ def pregunta_09():
     }
 
     """
-    return
+def pregunta_09():
+  a = open("data.csv", "r").readlines()
+  a = [z.replace("\n", "") for z in a]
+  a = [data.split("\t") for data in a]
+  a = [data[4].split(",") for data in a]
+  valores = []
+  for dicci in a:
+      [valores.append(valor) for valor in dicci]
+  x = [(valor.split(":")[0],int(valor.split(":")[1])) for valor in valores]
+
+  #print(x)
+  listaA=[]
+  listaB=[]
+  listaC=[]
+  listaD=[]
+  listaE=[]
+  listaF=[]
+  listaG=[]
+  listaH=[]
+  listaI=[]
+  listaJ=[]
+
+  for tupla in x: #obtenemos la tupla en cada iteración
+    if tupla[0]=="aaa":
+      listaA.append(int(tupla[1]))
+    elif tupla[0]=="bbb":
+      listaB.append(int(tupla[1]))
+    elif tupla[0]=="ccc":
+      listaC.append(int(tupla[1]))
+    elif tupla[0]=="ddd":
+      listaD.append(int(tupla[1]))
+    elif tupla[0]=="eee":
+      listaE.append(int(tupla[1]))
+    elif tupla[0]=="fff":
+      listaF.append(int(tupla[1]))
+    elif tupla[0]=="ggg":
+      listaG.append(int(tupla[1]))
+    elif tupla[0]=="hhh":
+      listaH.append(int(tupla[1]))
+    elif tupla[0]=="iii":
+      listaI.append(int(tupla[1]))
+    else:
+      listaJ.append(int(tupla[1]))
+
+  ayuda = {("aaa",len(listaA)),("bbb",len(listaB)),("ccc",len(listaC)),("ddd",len(listaD)),("eee",len(listaE)),("fff",len(listaF)),("ggg",len(listaG)),("hhh",len(listaH)),("iii",len(listaI)),("jjj",len(listaJ))}
+
+
+  return ayuda
 
 
 def pregunta_10():
