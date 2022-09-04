@@ -171,51 +171,51 @@ def pregunta_05():
 
 
 def pregunta_06():
-    a = open("data.csv", "r").readlines()
-    a = [z.replace("\n", "") for z in a]
-    a = [data.split("\t") for data in a]
-    a = [data[4].split(",") for data in a]
-    valores = []
-    for dicci in a:
-        [valores.append(valor) for valor in dicci]
-    x = [(valor.split(":")[0],int(valor.split(":")[1])) for valor in valores]
+  a = open("data.csv", "r").readlines()
+  a = [z.replace("\n", "") for z in a]
+  a = [data.split("\t") for data in a]
+  a = [data[4].split(",") for data in a]
+  valores = []
+  for dicci in a:
+      [valores.append(valor) for valor in dicci]
+  x = [(valor.split(":")[0],int(valor.split(":")[1])) for valor in valores]
 
-    print(x)
-    listaA=[]
-    listaB=[]
-    listaC=[]
-    listaD=[]
-    listaE=[]
-    listaF=[]
-    listaG=[]
-    listaH=[]
-    listaI=[]
-    listaJ=[]
+  #print(x)
+  listaA=[]
+  listaB=[]
+  listaC=[]
+  listaD=[]
+  listaE=[]
+  listaF=[]
+  listaG=[]
+  listaH=[]
+  listaI=[]
+  listaJ=[]
 
-    for tupla in x: #obtenemos la tupla en cada iteración
-      if tupla[0]=="aaa":
-        listaA.append(int(tupla[1]))
-      elif tupla[0]=="bbb":
-        listaB.append(int(tupla[1]))
-      elif tupla[0]=="ccc":
-        listaC.append(int(tupla[1]))
-      elif tupla[0]=="ddd":
-        listaD.append(int(tupla[1]))
-      elif tupla[0]=="eee":
-        listaE.append(int(tupla[1]))
-      elif tupla[0]=="fff":
-        listaF.append(int(tupla[1]))
-      elif tupla[0]=="ggg":
-        listaG.append(int(tupla[1]))
-      elif tupla[0]=="hhh":
-        listaH.append(int(tupla[1]))
-      elif tupla[0]=="iii":
-        listaI.append(int(tupla[1]))
-      else:
-        listaJ.append(int(tupla[1]))
-    ayuda = [("aaa",min(listaA),max(listaA)),("bbb",min(listaB),max(listaB)),("ccc",min(listaC),max(listaC)),("ddd",min(listaD),max(listaD)),("eee",min(listaE),max(listaE)),("fff",min(listaF),max(listaF)),("ggg",min(listaG),max(listaG)),("hhh",min(listaH),max(listaH)),("iii",min(listaI),max(listaI)),("jjj",min(listaJ),max(listaJ))]
+  for tupla in x: #obtenemos la tupla en cada iteración
+    if tupla[0]=="aaa":
+      listaA.append(int(tupla[1]))
+    elif tupla[0]=="bbb":
+      listaB.append(int(tupla[1]))
+    elif tupla[0]=="ccc":
+      listaC.append(int(tupla[1]))
+    elif tupla[0]=="ddd":
+      listaD.append(int(tupla[1]))
+    elif tupla[0]=="eee":
+      listaE.append(int(tupla[1]))
+    elif tupla[0]=="fff":
+      listaF.append(int(tupla[1]))
+    elif tupla[0]=="ggg":
+      listaG.append(int(tupla[1]))
+    elif tupla[0]=="hhh":
+      listaH.append(int(tupla[1]))
+    elif tupla[0]=="iii":
+      listaI.append(int(tupla[1]))
+    else:
+      listaJ.append(int(tupla[1]))
+  ayuda = [("aaa",min(listaA),max(listaA)),("bbb",min(listaB),max(listaB)),("ccc",min(listaC),max(listaC)),("ddd",min(listaD),max(listaD)),("eee",min(listaE),max(listaE)),("fff",min(listaF),max(listaF)),("ggg",min(listaG),max(listaG)),("hhh",min(listaH),max(listaH)),("iii",min(listaI),max(listaI)),("jjj",min(listaJ),max(listaJ))]
 
-    return ayuda
+  return ayuda
 
 
 def pregunta_07():
