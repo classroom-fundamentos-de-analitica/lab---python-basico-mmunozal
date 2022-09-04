@@ -402,18 +402,35 @@ def pregunta_11():
 
 
 def pregunta_12():
-    """
-    Genere un diccionario que contengan como clave la columna 1 y como valor la suma de
-    los valores de la columna 5 sobre todo el archivo.
+  a = open("data.csv", "r").readlines()
+  a = [z.replace("\n", "") for z in a]
+  a = [data.split("\t") for data in a]
+  a = [data[4].split(",") for data in a]
+  valores = []
+  for diccionario in a:
+      valores.append([int(valor.split(":")[1]) for valor in diccionario])
+  valores = [sum(a) for a in valores]
 
-    Rta/
-    {
-        'A': 177,
-        'B': 187,
-        'C': 114,
-        'D': 136,
-        'E': 324
-    }
+  b=columna1
 
-    """
-    return
+  #print(a)
+  #print(valores)
+  listaA=[]
+  listaB=[]
+  listaC=[]
+  listaD=[]
+  listaE=[]
+  for tupla in zip(b,valores ): #obtenemos la tupla en cada iteración
+    if tupla[0]=="A":
+      listaA.append(int(tupla[1]))
+    elif tupla[0]=="B":
+      listaB.append(int(tupla[1]))
+    elif tupla[0]=="C":
+      listaC.append(int(tupla[1]))
+    elif tupla[0]=="D":
+      listaD.append(int(tupla[1]))
+    else:
+      listaE.append(int(tupla[1]))
+  ayuda= [("A",sum(listaA)),("B",sum(listaB)),("C",sum(listaC)),("D",sum(listaD)),("E",sum(listaE))]
+  ayuda_dicci=dict(ayuda)
+  return ayuda_dicci
