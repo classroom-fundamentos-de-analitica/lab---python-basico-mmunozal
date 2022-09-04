@@ -303,26 +303,6 @@ def pregunta_08():
         break
   return tuples
 
-
-    """
-    Retorne un diccionario que contenga la cantidad de registros en que aparece cada
-    clave de la columna 5.
-
-    Rta/
-    {
-        "aaa": 13,
-        "bbb": 16,
-        "ccc": 23,
-        "ddd": 23,
-        "eee": 15,
-        "fff": 20,
-        "ggg": 13,
-        "hhh": 16,
-        "iii": 18,
-        "jjj": 18,
-    }
-
-    """
 def pregunta_09():
   a = open("data.csv", "r").readlines()
   a = [z.replace("\n", "") for z in a]
