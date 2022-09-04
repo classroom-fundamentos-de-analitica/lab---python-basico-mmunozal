@@ -219,52 +219,32 @@ def pregunta_06():
 
 
 def pregunta_07():
-    """
-    Retorne una lista de tuplas que asocien las columnas 0 y 1. Cada tupla contiene un
-    valor posible de la columna 2 y una lista con todas las letras asociadas (columna 1)
-    a dicho valor de la columna 2.
-
-    Rta/
-    [
-        (0, ["C"]),
-        (1, ["E", "B", "E"]),
-        (2, ["A", "E"]),
-        (3, ["A", "B", "D", "E", "E", "D"]),
-        (4, ["E", "B"]),
-        (5, ["B", "C", "D", "D", "E", "E", "E"]),
-        (6, ["C", "E", "A", "B"]),
-        (7, ["A", "C", "E", "D"]),
-        (8, ["E", "D", "E", "A", "B"]),
-        (9, ["A", "B", "E", "A", "A", "C"]),
-    ]
-
-    """
-    a = open("data.csv", "r").readlines()
-    a = [z.replace("\n", "") for z in a]
-    a = [data.split("\t") for data in a]
-    a = [(int(data[1]),data[0]) for data in a]
-    a = sorted(a)
-    tuples = []
-    previous_key = None
-    acum = 0
-    i = 0
-    letras = []
-    while(True):
-        key, value = a[i]
-        if previous_key is None:
-            previous_key = key
-        if key != previous_key:
-            tuples.append((previous_key,letras))
-            previous_key = key
-            letras = []
-            letras.append(value)
-        else:
-            letras.append(value)
-        i += 1
-        if i == len(a):
-            tuples.append((previous_key,letras))
-            break
-    return tuples
+  a = open("data.csv", "r").readlines()
+  a = [z.replace("\n", "") for z in a]
+  a = [data.split("\t") for data in a]
+  a = [(int(data[1]),data[0]) for data in a]
+  a = sorted(a)
+  tuples = []
+  previous_key = None
+  acum = 0
+  i = 0
+  letras = []
+  while(True):
+    key, value = a[i]
+    if previous_key is None:
+        previous_key = key
+    if key != previous_key:
+        tuples.append((previous_key,letras))
+        previous_key = key
+        letras = []
+        letras.append(value)
+    else:
+        letras.append(value)
+    i += 1
+    if i == len(a):
+        tuples.append((previous_key,letras))
+        break
+  return tuples
 
 
 def pregunta_08():
